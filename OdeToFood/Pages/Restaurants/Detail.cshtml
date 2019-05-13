@@ -11,4 +11,9 @@
 <div>Location: @Model.Restaurant.Location</div>
 <div>Cuisine: @Model.Restaurant.Cuisine</div>
 
+@if(Model.Message != null)
+{
+    <div class="alert alert-info">@Model.Message</div>
+}
+
 <a class="btn btn-primary" asp-page="./List">See all restaurants</a>
