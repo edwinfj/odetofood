@@ -15,7 +15,8 @@ namespace OdeToFood.Pages.Restaurants
         private readonly IConfiguration config;
         private readonly IRestaurantData restaurantData;
 
-        public string Message { get; private set; }
+        [TempData]
+        public string Message { get; set; }
         public IEnumerable<Restaurant> Restaurants { get; set; }
 
         [BindProperty(SupportsGet = true)]
